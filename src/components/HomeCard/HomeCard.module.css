@@ -1,0 +1,14 @@
+.heading {
+  columns: 2;
+  font-weight: 200;
+  }
+
+.heading img {
+  width: 500px;
+  border-radius: 5%;
+}
+
+.text {
+  font-size: medium;
+  margin: auto;
+}

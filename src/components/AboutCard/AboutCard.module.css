@@ -1,0 +1,25 @@
+/* src/components/About.css */
+.about {
+  padding: 20px;
+}
+
+.about-container h1 {
+  font-size: 2.5em;
+}
+
+.about-container h2 {
+  font-size: 1.5em;
+}
+
+.about-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-container ul li {
+  margin: 10px 0;
+}
+
+.about-container p {
+  font-size: 1.2em;
+}
