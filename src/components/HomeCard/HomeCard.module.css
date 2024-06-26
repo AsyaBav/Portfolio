@@ -1,14 +1,17 @@
-.heading {
+.content {
   columns: 2;
   font-weight: 200;
-  }
+}
 
-.heading img {
+.content img {
   width: 500px;
   border-radius: 5%;
 }
 
 .text {
-  font-size: medium;
-  margin: auto;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6c8dab;
+  margin-top: 16px;
+  line-height: 25px;
 }

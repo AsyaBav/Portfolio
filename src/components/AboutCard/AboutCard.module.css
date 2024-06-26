@@ -1,25 +1,31 @@
 /* src/components/About.css */
 .about {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.about-container h1 {
-  font-size: 2.5em;
+.about h2 {
+  font-size: 23px;
 }
 
-.about-container h2 {
-  font-size: 1.5em;
+.about p {
+  color: #6c8dab;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.about-container ul {
-  list-style-type: none;
-  padding: 0;
+.work{
+  display: flex;
+  flex-direction: column;
 }
 
-.about-container ul li {
-  margin: 10px 0;
+.work > span{
+  color: #6c8dab;
+  font-weight: 500;
 }
 
-.about-container p {
-  font-size: 1.2em;
+.skill > span{
+  color: #6c8dab;
+  font-weight: 500;
 }

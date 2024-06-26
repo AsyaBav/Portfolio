@@ -1,0 +1,21 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.list-item{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.list-item > p{
+    color: #6c8dab;
+}

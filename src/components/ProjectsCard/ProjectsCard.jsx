@@ -1,27 +1,48 @@
-import React from 'react';
+import React from "react";
+import styles from "./ProjectsCard.module.css";
+import project_1 from "../../assets/project-1.jpg";
+import project_2 from "../../assets/project-2.jpg";
+import project_3 from "../../assets/project-3.jpg";
 
-function Projects() {
+export const ProjectsCard = () => {
   const projects = [
-    { id: 1, name: 'Проект 1', description: 'Описание проекта 1', technologies: 'React, Node.js', link: '#' },
-    { id: 2, name: 'Проект 2', description: 'Описание проекта 2', technologies: 'Vue, Firebase', link: '#' },
-    // добавь больше проектов по желанию
+    {
+      id: 1,
+      name: "Проект 1",
+      img: project_1,
+      technologies: "React, Node.js",
+      link: "#",
+    },
+    {
+      id: 2,
+      name: "Проект 2",
+      img: project_2,
+      technologies: "Vue, Firebase",
+      link: "#",
+    },
+
+    {
+      id: 3,
+      name: "Проект 3",
+      img: project_3,
+      technologies: "React, Express",
+      link: "#",
+    },
   ];
 
   return (
-    <div>
+    <div className={styles.content}>
       <h1>Мои проекты</h1>
-      <ul>
-        {projects.map(project => (
-          <li key={project.id}>
+      <div className={styles.project}>
+        {projects.map((project) => (
+          <div key={project.id} className={styles.info}>
             <h2>{project.name}</h2>
-            <p>{project.description}</p>
-            <p>Технологии: {project.technologies}</p>
+            <img src={project.img} alt="Картинка" />
+            <span>Технологии: {project.technologies}</span>
             <a href={project.link}>Ссылка на проект</a>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
-}
-
-export default Projects;
+};

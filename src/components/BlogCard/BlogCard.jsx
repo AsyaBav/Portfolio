@@ -1,26 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import styles from "./BlogCard.module.css";
 
-function Blog() {
-  const posts = [
-    { id: 1, title: 'Статья 1', excerpt: 'Краткое описание статьи 1', link: '/blog/1' },
-    { id: 2, title: 'Статья 2', excerpt: 'Краткое описание статьи 2', link: '/blog/2' },
-    // добавь больше статей по желанию
-  ];
+export const BlogCard = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((response) => response.json())
+      .then((data) => setPosts(data));
+  }, []);
 
   return (
-    <div>
+    <div className={styles.content}>
       <h1>Мой блог</h1>
-      <ul>
-        {posts.map(post => (
-          <li key={post.id}>
+      <ul className={styles.list}>
+        {posts.map((post) => (
+          <li key={post.id} className={styles["list-item"]}>
             <h2>{post.title}</h2>
-            <p>{post.excerpt}</p>
-            <a href={post.link}>Читать дальше</a>
+            <p>{post.body}</p>
           </li>
         ))}
       </ul>
     </div>
   );
-}
-
-export default Blog;
+};

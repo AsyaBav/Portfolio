@@ -1,8 +1,11 @@
-import React from 'react'
-import styles from './Blog.module.css';
+import React from "react";
+import styles from "./Blog.module.css";
+import { BlogCard } from "../../components";
 
 export const Blog = () => {
   return (
-    <div className={styles.content}>Blog</div>
-  )
-}
+    <div className={styles.content}>
+      <BlogCard />
+    </div>
+  );
+};
